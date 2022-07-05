@@ -5,10 +5,22 @@ function computerPlay(){
 }
 console.log(computerPlay(myArray))
 
-function playRound(playerSelection, computerSelect){
-    return "You Lose! Paper beats Rock"
+function playRound(playerSelection, computerSelection){
+    computerSelection = computerPlay().toLowerCase();
+    playerSelection = playerSelection.toLowerCase();
+    if (computerSelection == playerSelection){
+        return ("Tie game!");
+    }else if
+        (computerSelection == "rock" && playerSelection == "scissors"){
+            return ("Rock crushes scissors, you lose!");
+        }else if 
+        (computerSelection == "scissors" && playerSelection == "paper"){
+            return ("Scissors cut paper, you lose!");
+        }else if
+        (computerSelection == "paper" && playerSelection == "rock"){
+            return ("Paper covers rock, you lose!");
+        }
+        console.log(playRound(playerSelection, computerSelection));
 }
 
-const playerSelection = "rock";
-const computerSelection = computerPlay();
-console.log(playRound(playerSelection, computerSelection));
+
